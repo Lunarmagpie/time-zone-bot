@@ -116,7 +116,7 @@ function get_user_timezone(channel, command,t,a){
 function set_user_timezone(channel, author, command,t){
   //This is where people set thier timezones
   if (command[2]>=-12 && command[2]<=12){
-    if (command[2] = -12) command[2] = 12;
+    if (command[2] == -12) command[2] = 12;
 
     t[author] = command[2];
     fs.writeFile('user_timezones.json',JSON.stringify(t),finished)
